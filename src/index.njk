@@ -1,11 +1,158 @@
 ---
-title: Home
+title: Andrew
+baseline: I'm a philosopher of the mind
+introdution: Most of my work is also connected to value theory, epistemology, metaphysics, or cognitive science
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+  reverse: true
 ---
+
 
 {% extends "layout.njk" %}
 
 {% block body %}
-  <main class="p-4 prose">
-    <h1>This is the {{ title | lower }} page.</h1>
-  </main>
+
+  <section class="container mx-auto text-left md:text-center px-4 py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+      <div>
+        <div class="justify-center">
+          <img class="h-56 w-56 rounded-full mx-auto" src="./assets/andrew.jpg" alt="Andrew Y. Lee"/>
+        </div>
+        <h1 class="text-2xl text-gray-300 leading-tight pt-4 mb-2">{{ title }}</h1>
+        <h2 class="text-lg text-gray-400 mb-6 italic">
+          {{ baseline }}
+        </h2>
+        <div class="block md:flex justify-center space-x-0 md:space-x-2 space-y-2 md:space-y-0">
+          <a href="mailto:andrew.yuan.lee@gmail.com" class="btn btn-primary btn-lg w-full md:w-auto text-gray-400 hover:text-blue-500">Email</a>
+          <a href="#" class="btn btn-primary btn-lg w-full md:w-auto text-gray-400 hover:text-blue-500">CV</a>
+          <a href="https://philpeople.org/profiles/andrew-y-lee" class="btn btn-light btn-lg w-full md:w-auto text-gray-400 hover:text-blue-500">Philpeople</a>
+        </div>
+      </div>
+      <div class="pt-12">
+        <p class="text-lg text-gray-400 leading-tight mb-2 font-Vollkorn italic text-left">{{ introdution }}</p>
+        <ul class="text-base list-disc text-gray-400 leading-relaxed text-left pt-2">
+          <li>I received my PhD from New York University in 2019.</li>
+          <li>Before that, I studied Philosophy and Cognitive Science at Brown University.</li>
+          <li>In 2019-20, I'm a Mellon Postdoctoral Fellow at Rice University through its Value of Consciousness Project.</li>
+          <li>In 2020-21, I'll be a Research Fellow at Australian National University's Centre for Consciousness.</li>
+          <li>From 2021-24, I'll be a Postdoctoral Fellow at the University of Oslo through its ConsciousBrainConcepts project.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="w-full overflow-hidden my-12">
+      <div>
+        <section class="text-blue-900">
+          <div class="container px-5 mx-auto">
+            <div class="text-center mb-15">
+              <p class="text-2xl text-center font-sans font-bold mb-10 text-gray-400">
+                My research examines:
+              </p>
+            </div>
+            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+              <div class="w-full px-4 py-2">
+                <details class="mb-4">
+                  <summary class="text-lg bg-gray-200 py-2 px-4">
+                    1. The formal structure of conscious experiences
+                  </summary>
+
+                  <span class="text-gray-200">
+                    Conscious experiences are structured. Consider how your perceptual experience breaks down into sensory modalities, how your pain experiences come in different degrees of intensity, and how your color experiences have hue, saturation, and brightness
+                    as dimensions of variation. However, while it is obvious that experiences have structure, there has been little consensus on basic questions about that structure. My work aims to identify what kinds of structures conscious experiences have and
+                    develops formal models that capture that structure.
+                  </span>
+                </details>
+                <details class="mb-4">
+                  <summary class="text-lg bg-gray-200 py-2 px-4">
+                    2. The ethics and metaethics of consciousness
+                  </summary>
+
+                  <span class="text-gray-200 pt-2">
+                    There is a common intuition that there are intimate connections between consciousness and value. If you lost the capacity for consciousness but remained otherwise the same, you would lose much of what makes your life good. My work argues that
+                    consciousness itself has no intrinsic value but argues that consciousness and value are nevertheless systematically connected. Amongst other things, I argue that some ethical facts are derivable from purely descriptive phenomenal facts, that pain is
+                    bad purely because of how it feels, and that consciousness is what makes an entity a welfare subject.
+                  </span>
+                </details>
+                <details class="mb-4">
+                  <summary class="text-lg bg-gray-200 py-2 px-4">
+                    3. The epistemology of conscious experiences
+                  </summary>
+
+                  <span class="text-gray-200 pt-2">
+                    Our knowledge of our own conscious experiences differs from our knowledge of the external world. But what exactly does that difference consist in? My work aims to answer this by examining questions about the nature and structure of introspection,
+                    imagination, phenomenal concepts, and phenomenal knowledge. A theme is that the epistemology of experience is special, but not always in the ways that philosophers have traditionally thought.
+                  </span>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="container mx-auto text-left md:text-center px-4 bg-white-100 py-24">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+    <div>
+      <div class="text-center mb-15">
+        <p class="text-2xl text-center font-sans font-bold mb-10 text-gray-400">
+          Manuscripts
+        </p>
+      </div>
+
+      {% for post in collections.manuscripts %}
+  <div class="max-w-xl"
+  <ul class="block w-10/12 my-4 mx-auto" x-data="{selected:null}">
+    <li class="flex align-center flex-col">
+      <div @click="selected !== 1 ? selected = 1 : selected = null" class="cursor-pointer px-5 py-3 bg-white hover:opacity-75 hover:shadow hover:-mb-3">
+        <h4 class="text-gray-900 text-base text-center inline-block">{{ post.data.title }}</h4>
+      </div>
+      <p x-show="selected == 1" class="border py-4 px-2 text-gray-400">
+        {{ post.data.excerpt }}<a class="text-sm text-gray-400" href="{{ post.url | url }}">[Read more]</a>
+      </p>
+    </li>
+  </ul>
+  </div>
+  {% endfor %}
+
+    </div>
+
+    <div>
+      <div class="text-center mb-15">
+        <p class="text-2xl text-center font-sans font-bold mb-10 text-gray-400">
+          Publications
+        </p>
+      </div>
+      {% for post in collections.publications %}
+<div class="max-w-xl"
+  <ul class="block w-10/12 my-4 mx-auto" x-data="{selected:null}">
+    <li class="flex align-center flex-col">
+      <div @click="selected !== 2 ? selected = 2 : selected = null" class="cursor-pointer px-5 py-3 bg-white hover:opacity-75 hover:shadow hover:-mb-3">
+        <h4 class="text-gray-900 text-base text-center inline-block">{{ post.data.title }}</h4>
+        <time class="inline-flex bg-blue-500 text-gray-900 rounded-full h-6 px-3 justify-center items-center text-sm font-medium mt-1">{{ post.date.toDateString() }}
+        </time>
+      </div>
+      <p x-show="selected == 2" class="border py-4 px-2 text-gray-400">
+        {{ post.data.excerpt }}<a class="text-sm text-gray-400" href="{{ post.url | url }}">[Read more]</a>
+      </p>
+    </li>
+  </ul>
+</div>
+{% endfor %}
+
+</div>
+
+</div>
+</section>
+
+
+
+
+
 {% endblock %}

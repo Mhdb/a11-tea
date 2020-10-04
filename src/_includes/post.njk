@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block body %}
+
+<article class="container mx-auto py-24 px-4" itemid="#" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="w-full md:w-2/3 mx-auto text-center mb-12">
+    <p class="mb-3 text-gray-600 text-white uppercase tracking-wider font-semibold text-xs">{{ post.data.tag }}</p>
+    <h1 class="text-4xl text-white md:text-5xl leading-tight mb-3 font-bold" itemprop="headline" title="{{ title }}">
+      {{ title }}
+    </h1>
+    <p class="text-gray-700">
+      Written by
+      <span class="byline author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+        <a href="#" target="_blank" itemprop="url" rel="author noopener noreferrer" class="text-primary hover:text-primary-dark"><span itemprop="name">Andrew Y. Lee</span></a>
+      </span>
+      on <time itemprop="datePublished dateModified" datetime="2010-08-07 11:11:03-0400" pubdate>{{ page.date.toDateString() }}</time>
+    </p>
+  </div>
+
+  <div class="content post text-white mx-auto">
+      {{ content | safe }}
+  </div>
+</article>
+{% endblock %}

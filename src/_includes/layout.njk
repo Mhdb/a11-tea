@@ -3,12 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# Google Schema #}
+    <meta itemprop="name" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
+    <meta itemprop="description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+
+    {# Open Graph #}
+        <meta name="og:title" content="{% if metaTitle %}{{ metaTitle }}{{ ' | '}}{% endif %}{% if title %}{{ title }}{{ ' | '}}{% endif %}{% if site.name %}{{ site.name }}{% endif %}">
+        <meta name="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}{{ site.description }}{% endif %}">
+        <meta name="og:image" content="{{ site.url }}{{ site.baseUrl }}{{ site.images.og }}">
+        <meta name="og:url" content="{{ site.url }}{{ site.baseUrl }}">
+        <meta name="og:site_name" content="{{ site.name }}">
+        <meta name="og:locale" content="en_GB">
+        <meta name="og:type" content="website">
+
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+
+
   <link rel="stylesheet" href="/assets/main.bundle.css">
   <script src="/assets/main.bundle.js" defer></script>
   <title>{{ title }}</title>
   {% block head %}{% endblock %}
 </head>
-<body>
+<body class="bg-gray-900">
   {% include 'header.njk' %}
   {% block body %}{% endblock %}
 </body>
