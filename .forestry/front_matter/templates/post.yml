@@ -5,6 +5,8 @@ fields:
 - type: text
   name: layout
   label: layout
+  default: post
+  hidden: true
 - type: text
   name: title
   label: title
@@ -14,9 +16,29 @@ fields:
 - type: datetime
   name: date
   label: date
+  config:
+    date_format: YYYY-MM-DD
+    export_format: YYYY-MM-DD
+  description: YYYY-MM-DD
 - type: datetime
   name: updatedDate
   label: updatedDate
+  hidden: true
 - type: list
   name: tags
   label: tags
+  description: '1. Always add : <strong>post</strong> as a tag.<br>2. Add the tag
+    <strong>publications</strong> or <strong>manuscripts</strong> depending of what
+    you want to publish.'
+  config:
+    use_select: true
+    source:
+      type: simple
+      section: ''
+      file: 
+      path: ''
+    min: 2
+    options:
+    - post
+    - publications
+    - manuscripts
