@@ -42,3 +42,5 @@ fields:
     - post
     - publications
     - manuscripts
+pages:
+- src/posts/this-is-a-test.md
