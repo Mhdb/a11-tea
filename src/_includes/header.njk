@@ -1,14 +1,21 @@
-<nav class="p-4 space-x-2">
+<nav class="z-30 w-full px-2 sm:px-4 py-4">
+  <div class="container mx-auto flex justify-between items-center">
   <a
-    class="{{ 'font-black' if page.url == '/' }}"
+    class="{{ 'uppercase font-serif text-white text-5xl' if page.url == '/' }}"
     href="/"
   >
-    Home
+    Andrew Y. Lee
   </a>
   <a
-    class="{{ 'font-black' if page.url == '/about/' }}"
+    class="{{ 'text-white' if page.url == '/about/' }}"
     href="/about"
   >
     About
   </a>
+</div>
 </nav>
+<!-- component -->
+<!-- Dark Header component -->
+ <!-- Fontswesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>

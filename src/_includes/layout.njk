@@ -22,10 +22,16 @@
 
   <link rel="stylesheet" href="/assets/main.bundle.css">
   <script src="/assets/main.bundle.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
   <title>{{ title }}</title>
+  <style>
+body {
+  background-color: #2f2e2e;
+}
+</style>
   {% block head %}{% endblock %}
 </head>
-<body class="bg-gray-900">
+<body class="caontainer mx-auto px-5">
   {% include 'header.njk' %}
   {% block body %}{% endblock %}
 </body>
