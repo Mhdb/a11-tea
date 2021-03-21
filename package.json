@@ -35,18 +35,18 @@
   },
   "homepage": "https://github.com/mattwaler/tea-stack#readme",
   "dependencies": {
-    "alpinejs": "^2.7.3"
+    "alpinejs": "^2.8.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^9.8.6",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.33.1",
+    "rollup": "^2.42.1",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-terser": "^6.1.0",
     "tailwindcss": "^1.9.6"

@@ -10,159 +10,173 @@ pagination:
 ---
 {% extends "layout.njk" %}
 {% block body %}
-  <section class="container mx-auto flex px-5 py-24 items-center justify-center flex-col text-left md:text-center">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
-      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-        <div class="text-white text-base leading-relaxed text-left lg:pl-10">
-        <p class="pt-4">
-          {{ baseline }}
-        </p>
-        <p class="pt-4">
-          {{ introdution }}
-        </p>
-      </div>
-        <div class="text-base text-white text-base leading-relaxed text-left pt-8 lg:pl-10">
-          <p class="pt-4">I received​ my PhD from New York University in 2019. Before that, I studied Philosophy and Cognitive Science at Brown University.</p>
-          <p class="pt-4">In 2019-20, I was a Postdoctoral Fellow at Rice University through its Value of Consciousness project.</p>
-          <p class="pt-4">From 2020-24, I am a Postdoctoral Fellow at the University of Oslo through its ConsciousBrainConcepts project.</p>
-          <p class="pt-4">During 2020-21, I will be a Postdoctoral Fellow at Australian National University through its Centre for Consciousness.</p>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div>
+          <img class="h-48 mx-auto" src="./assets/andrew.jpg" alt="Andrew Y. Lee"/>
         </div>
-      </div>
-      <div>
-        <div class="justify-center">
-          <img class="h-58 rounded-full mx-auto" src="./assets/andrew.jpg" alt="Andrew Y. Lee"/>
+        <div>
+          <ul class="text-base list-disc text-white leading-relaxed text-left pt-2">
+            <p>You can reach me at
+              <a href="mailto:andrew.yuan.lee@gmail.com" class="text-white hover:text-blue-500">andrew.yuan.lee@gmail.com</a>
+            </p>
+            <p>Here is my​
+              <a href="#" class="text-white hover:text-blue-500">CV</a>
+            </p>
+            <p>You can also find me on
+              <a href="https://philpeople.org/profiles/andrew-y-lee" class="text-white hover:text-blue-500">Philpeople</a>
+            </p>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container mx-auto text-left md:text-center px-4 bg-white-100 py-24">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
-      <div>
-        <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          <p class="text-white">My main projects are</p>
-          <div class="w-full text-left px-4 py-2">
-            <details class="mb-4">
-              <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
-                1. The formal structure of conscious experiences
-              </summary>
-
-              <span class="text-white">
-                Conscious experiences are structured. Consider how your perceptual experience breaks down into sensory modalities, how your pain experiences come in different degrees of intensity, and how your color experiences have hue, saturation, and brightness
-                as dimensions of variation. However, while it is obvious that experiences have structure, there has been little consensus on basic questions about that structure. My work aims to identify what kinds of structures conscious experiences have and
-                develops formal models that capture that structure.
-              </span>
-            </details>
-            <details class="mb-4">
-              <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
-                2. The ethics and metaethics of consciousness
-              </summary>
-
-              <span class="text-white pt-2">
-                There is a common intuition that there are intimate connections between consciousness and value. If you lost the capacity for consciousness but remained otherwise the same, you would lose much of what makes your life good. My work argues that
-                consciousness itself has no intrinsic value but argues that consciousness and value are nevertheless systematically connected. Amongst other things, I argue that some ethical facts are derivable from purely descriptive phenomenal facts, that pain is
-                bad purely because of how it feels, and that consciousness is what makes an entity a welfare subject.
-              </span>
-            </details>
-            <details class="mb-4">
-              <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
-                3. The epistemology of conscious experiences
-              </summary>
-
-              <span class="text-white pt-2">
-                Our knowledge of our own conscious experiences differs from our knowledge of the external world. But what exactly does that difference consist in? My work aims to answer this by examining questions about the nature and structure of introspection,
-                imagination, phenomenal concepts, and phenomenal knowledge. A theme is that the epistemology of experience is special, but not always in the ways that philosophers have traditionally thought.
-              </span>
-            </details>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <ul class="text-base list-disc text-white leading-relaxed text-left pt-2">
-          <p>You can reach me at <a href="mailto:andrew.yuan.lee@gmail.com" class="text-white hover:text-blue-500">andrew.yuan.lee@gmail.com</a></p>
-          <p>Here is my​ <a href="#" class="text-white hover:text-blue-500">CV</a></p>
-          <p>You can also find me on <a href="https://philpeople.org/profiles/andrew-y-lee" class="text-white hover:text-blue-500">Philpeople</a></p>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="container mx-auto text-left md:text-center px-4 bg-white-100 py-24">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
-      <div>
-        <div class="text-center mb-15">
-          <p class="text-2xl text-center font-serif font-sans font-bold mb-10 text-white">
-            Manuscripts
+        <div class="text-white text-base leading-relaxed text-left">
+          <p class="pt-4">
+            {{ baseline }}
+          </p>
+          <p class="pt-4">
+            {{ introdution }}
           </p>
         </div>
-
-        {% for post in collections.manuscripts %}
-          <div class="container mx-auto">
-            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-              <div class="w-full text-left cursor-pointer hover:opacity-75">
-                <details class="">
-                  <summary class="text-lg text-gray-100 py-2 px-2">
-                    {{ post.data.title }}
-                  </summary>
-
-                  <span class="text-white">
-                    {{ post.data.excerpt }}
-                  </span>
-                </details>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
       </div>
-      <div>
-        <div class="text-center mb-15">
-          <p class="text-2xl text-center font-serif font-sans font-bold mb-10 text-white">
-            Publications
-          </p>
-        </div>
-        {% for post in collections.publications %}
-          <div class="container mx-auto">
-            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-              <div class="w-full text-left cursor-pointer hover:opacity-75">
-                <details class="">
-                  <summary class="text-lg text-gray-100 py-2 px-2">
-                    {{ post.data.title }}
-                    <time class="inline-flex bg-blue-400 text-gray-900 rounded-full h-4 px-2 justify-center items-center text-sm ml-1">{{ post.date.toDateString() }}
-                    </time>
-                  </summary>
-
-                  <span class="text-white">
-                    {{ post.data.excerpt }}
-                  </span>
-                </details>
-              </div>
-            </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div class="box row-start-auto">
+          <p class="text-blue-200 text base leading-relaxed text-left hover:text-purple-500">About</p>
+          <div class="text-base text-white text-base leading-relaxed text-left">
+            <p class="pt-4">I am currently a Mellon Postdoctoral Fellow at Rice University in association with a research seminar on Consciousness and Value directed by Uriah Kriegel and Charles Siewert. In 2020-21, I will be a Postdoctoral Research Fellow at Australian National University in association with a project on the Language of Consciousness directed by Daniel Stoljar. </p>
+            <p class="pt-4">Before that, I was a PhD student at NYU. At NYU, I worked with David Chalmers (PhD supervisor), Ned Block, and Thomas Nagel. I also spent two semesters as a visiting student at Institut Jean Nicod in Paris, where I worked with Uriah Kriegel.</p>
+            <p class="pt-4">Before that, I was an undergrad at Brown University, where I worked with Jaegwon Kim and Christopher Hill. I graduated in 2013 with a BA in Philosophy, BS in Cognitive Science, and an MA in Philosophy. I was a recipient of the Beinecke Scholarship in 2012.</p>
+            <p class="pt-4">Before that, I was an International Baccalaureate student at Shawnee Mission East High School, which is when I first discovered my interest in philosophy. I wrote my senior paper on philosophical zombies.</p>
+            <p class="pt-4">Outside my academic interests, I also like fitness, food, and games. Sometimes when I’m not thinking about experiences, I even have some experiences of my own.</p>
           </div>
-        {% endfor %}
-        <div class="text-center mb-15">
-          <p class="text-2xl text-center font-sans font-serif font-bold mb-10 text-white pt-4">
-            Commentaries
-          </p>
         </div>
-        {% for post in collections.commentaries %}
-          <div class="container mx-auto">
-            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-              <div class="w-full text-left cursor-pointer hover:opacity-75">
-                <details class="">
-                  <summary class="text-lg text-gray-100 py-2 px-2">
-                    {{ post.data.title }}
-                  </summary>
-
-                  <span class="text-white">
-                    {{ post.data.excerpt }}
-                  </span>
-                </details>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
       </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div>
+          <div class="flex flex-wrap">
+            <p class="text-blue-200 text base leading-relaxed text-left hover:text-purple-500">My main projects are</p>
+            <div class="w-full text-left px-4 py-2">
+              <details class="mb-4">
+                <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
+                  1. The formal structure of conscious experiences
+                </summary>
+
+                <span class="text-white">
+                  Conscious experiences are structured. Consider how your perceptual experience breaks down into sensory modalities, how your pain experiences come in different degrees of intensity, and how your color experiences have hue, saturation, and brightness
+                  as dimensions of variation. However, while it is obvious that experiences have structure, there has been little consensus on basic questions about that structure. My work aims to identify what kinds of structures conscious experiences have and
+                  develops formal models that capture that structure.
+                </span>
+              </details>
+              <details class="mb-4">
+                <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
+                  2. The ethics and metaethics of consciousness
+                </summary>
+
+                <span class="text-white pt-2">
+                  There is a common intuition that there are intimate connections between consciousness and value. If you lost the capacity for consciousness but remained otherwise the same, you would lose much of what makes your life good. My work argues that
+                  consciousness itself has no intrinsic value but argues that consciousness and value are nevertheless systematically connected. Amongst other things, I argue that some ethical facts are derivable from purely descriptive phenomenal facts, that pain is
+                  bad purely because of how it feels, and that consciousness is what makes an entity a welfare subject.
+                </span>
+              </details>
+              <details class="mb-4">
+                <summary class="text-lg text-gray-100 cursor-pointer hover:opacity-75 py-2 px-4">
+                  3. The epistemology of conscious experiences
+                </summary>
+
+                <span class="text-white pt-2">
+                  Our knowledge of our own conscious experiences differs from our knowledge of the external world. But what exactly does that difference consist in? My work aims to answer this by examining questions about the nature and structure of introspection,
+                  imagination, phenomenal concepts, and phenomenal knowledge. A theme is that the epistemology of experience is special, but not always in the ways that philosophers have traditionally thought.
+                </span>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div>
+            <p class="text-blue-200 text base leading-relaxed text-left hover:text-purple-500">
+              Manuscripts
+            </p>
+
+          {% for post in collections.manuscripts %}
+            <div class="container mx-auto">
+              <div class="flex flex-wrap">
+                <div class="w-full text-left cursor-pointer hover:opacity-75">
+                  <details class="">
+                    <summary class="text-lg text-gray-100 py-2 px-2">
+                      {{ post.data.title }}
+                    </summary>
+
+                    <span class="text-white">
+                      {{ post.data.excerpt }}
+                    </span>
+                  </details>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div>
+          <div class="text-center mb-15">
+            <p class="text-blue-200 text base leading-relaxed text-left hover:text-purple-500">
+              Publications
+            </p>
+          </div>
+          {% for post in collections.publications %}
+            <div class="container mx-auto">
+              <div class="flex flex-wrap">
+                <div class="w-full text-left cursor-pointer hover:opacity-75">
+                  <details class="">
+                    <summary class="text-lg text-gray-100 py-2 px-2">
+                      {{ post.data.title }}
+                      <time class="inline-flex bg-blue-400 text-gray-900 rounded-full h-4 px-2 justify-center items-center text-sm ml-1">{{ post.date.toDateString() }}
+                      </time>
+                    </summary>
+
+                    <span class="text-white">
+                      {{ post.data.excerpt }}
+                    </span>
+                  </details>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          <div class="text-center mb-15">
+            <p class="text-blue-200 text base leading-relaxed text-left hover:text-purple-500">
+              Commentaries
+            </p>
+          </div>
+          {% for post in collections.commentaries %}
+            <div class="container mx-auto">
+              <div class="flex flex-wrap">
+                <div class="w-full text-left cursor-pointer hover:opacity-75">
+                  <details class="">
+                    <summary class="text-lg text-gray-100 py-2 px-2">
+                      {{ post.data.title }}
+                    </summary>
+
+                    <span class="text-white">
+                      {{ post.data.excerpt }}
+                    </span>
+                  </details>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
     </div>
-  </section>
+      </div>
+</section>
+  <div class="grid overflow-hidden sm grid-cols-4 grid-rows-1 gap-3">
+    <div class="box row-start-auto">
+
+    </div>
+
+    <div class="box row-start-auto">
+
+    </div>
+    <div class="box row-start-auto">
+
+  </div>
+
 {% endblock %}
